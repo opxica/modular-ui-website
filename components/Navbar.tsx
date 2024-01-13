@@ -1,6 +1,6 @@
 import React from "react";
 import { BsSearch } from "react-icons/bs";
-import { ImCart } from "react-icons/im";
+
 import { FiMenu } from "react-icons/fi";
 
 const Navbar = () => {
