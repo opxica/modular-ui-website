@@ -15,7 +15,7 @@ export const Navbar = () => {
             <Link
               key={link.title}
               href={link.path}
-              className="font-medium text-gray-100 hover:text-gray-100/75"
+              className="font-sf-pro-rounded-regular text-gray-100 hover:text-gray-100/75"
             >
               {link.title}
             </Link>

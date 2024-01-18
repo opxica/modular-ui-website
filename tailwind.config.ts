@@ -7,7 +7,14 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        "sf-pro-rounded-regular": ["SFProRoundedRegular", "sans-serif"],
+        "sf-pro-rounded-medium": ["SFProRoundedMedium", "sans-serif"],
+        "sf-pro-display-regular": ["SFProDisplayRegular", "sans-serif"],
+        "sf-pro-display-medium": ["SFProDisplayMedium", "sans-serif"],
+      },
+    },
   },
   plugins: [],
 };
