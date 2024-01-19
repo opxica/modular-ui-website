@@ -4,7 +4,7 @@ const SearchBar = () => {
   return (
     <div className="relative block">
       <input
-        className="outline-0.5 h-10 w-full rounded-xl border-none bg-zinc-900 pe-10 ps-4 text-sm text-gray-100 outline-zinc-800 focus:outline sm:w-44"
+        className="outline-0.5 font-sf-pro-rounded-regular h-10 w-full rounded-xl border-none bg-zinc-900 pe-10 ps-4 text-sm text-gray-100 outline-zinc-800 focus:outline sm:w-44"
         id="search"
         type="search"
         placeholder="Search..."

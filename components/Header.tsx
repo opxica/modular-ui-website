@@ -6,7 +6,7 @@ import SearchBar from "./SearchBar";
 
 const Header = () => {
   return (
-    <header className="sticky top-4 mx-4">
+    <header className="sticky top-4 mx-4 mt-4">
       <div className="mx-auto flex h-14 max-w-screen-xl items-center gap-6 rounded-xl bg-zinc-900/60 px-1.5 shadow-inner shadow-zinc-900 backdrop-blur-md">
         <Link className="block" href="/">
           <Image
