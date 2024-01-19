@@ -31,10 +31,10 @@
 }
 
 :root {
-  --background-dark: #1a1a1a;
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
-/* Utilisez des variables par défaut (mode clair) */
 body {
-  background-color: var(--background-light);
+  background-color: var(--background-dark);
 }
