@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { motion } from "framer-motion";
+import { useState } from "react";
 
 const NavLinks = [
   { title: "Docs", path: "/" },
@@ -7,17 +9,27 @@ const NavLinks = [
 ];
 
 export const Navbar = () => {
+  const [activeNavLinks, setActiveNavLinks] = useState(NavLinks[0].title);
   return (
     <div>
-      <nav aria-label="Global" className="hidden md:block">
-        <div className="flex items-center gap-6 text-sm">
+      <nav aria-label="Global" className="hidden sm:block">
+        <div className="flex items-center gap-4 text-xs">
           {NavLinks.map((link) => (
             <Link
               key={link.title}
-              href={link.path}
-              className="font-sf-pro-rounded-regular text-gray-100 hover:text-gray-100/75"
+              onClick={() => setActiveNavLinks(link.title)}
+              className="relative rounded-full px-4 py-2 font-sf-pro-rounded-regular text-neutral-100 transition hover:text-neutral-100/75"
+              href="/"
             >
-              {link.title}
+              {activeNavLinks === link.title && (
+                <motion.div
+                  layoutId="active-pil"
+                  className="absolute inset-0 bg-neutral-900/75"
+                  style={{ borderRadius: 9999 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 30 }}
+                ></motion.div>
+              )}
+              <span className="relative z-10">{link.title}</span>
             </Link>
           ))}
         </div>

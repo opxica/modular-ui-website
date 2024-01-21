@@ -8,17 +8,17 @@ const SocialMedia = () => {
         href="https://twitter.com/modularui"
         target="_blank"
         rel="noopener noreferrer"
-        className="block text-gray-100 transition hover:text-gray-100/75"
+        className="block text-neutral-100 transition hover:text-neutral-100/75"
       >
-        <IconBrandX size={20} />
+        <IconBrandX size={18} />
       </Link>
       <Link
         href="https://github.com/opxica"
         target="_blank"
         rel="noopener noreferrer"
-        className="block text-gray-100 transition hover:text-gray-100/75"
+        className="block text-neutral-100 transition hover:text-neutral-100/75"
       >
-        <IconBrandGithub size={20} />
+        <IconBrandGithub size={18} />
       </Link>
     </div>
   );
