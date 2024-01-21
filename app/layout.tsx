@@ -4,7 +4,7 @@ import Header from "@/components/Header";
 
 export const metadata: Metadata = {
   icons: {
-    icon: "/icon.ico",
+    icon: "/favicon.ico",
   },
   title: "Modular UI",
   description:
