@@ -3,7 +3,7 @@
 # dependencies
 /node_modules
 /.pnp
-.pnp.js
+.pnp.js 
 .yarn/install-state.gz
 
 # testing
@@ -34,3 +34,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# IDE
+.vscode/*

@@ -1,5 +1,6 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+import type { Config } from "tailwindcss";
+
+const config: Config = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -7,12 +8,14 @@ module.exports = {
   ],
   theme: {
     extend: {
-     
-      colors: {
-        hoverColor: "#ffaa17",
-        darkRed: "#ea0638",
+      fontFamily: {
+        "sf-pro-rounded-regular": ["SFProRoundedRegular", "sans-serif"],
+        "sf-pro-rounded-medium": ["SFProRoundedMedium", "sans-serif"],
+        "sf-pro-display-regular": ["SFProDisplayRegular", "sans-serif"],
+        "sf-pro-display-medium": ["SFProDisplayMedium", "sans-serif"],
       },
     },
   },
   plugins: [],
 };
+export default config;

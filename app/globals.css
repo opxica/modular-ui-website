@@ -2,16 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-  .navbarLi {
-    @apply hover:text-hoverColor cursor-pointer duration-300;
-  }
-  
+@font-face {
+  font-family: "SFProDisplayMedium";
+  src: url("/fonts/SF-Pro-Display-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
 }
 
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
- 
+@font-face {
+  font-family: "SFProDisplayRegular";
+  src: url("/fonts/SF-Pro-Display-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SFProRoundedMedium";
+  src: url("/fonts/SF-Pro-Rounded-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SFProRoundedRegular";
+  src: url("/fonts/SF-Pro-Rounded-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+body {
+  background-color: var(--background-dark);
 }

@@ -1,34 +1,39 @@
-import React from "react";
-import { BsSearch } from "react-icons/bs";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { useState } from "react";
 
-import { FiMenu } from "react-icons/fi";
+const NavLinks = [
+  { title: "Docs", path: "/" },
+  { title: "Components", path: "/" },
+  { title: "FAQs", path: "/" },
+];
 
-const Navbar = () => {
+export const Navbar = () => {
+  const [activeNavLinks, setActiveNavLinks] = useState(NavLinks[0].title);
   return (
-    <div className="w-full h-10 lg:h-12 border-b-[1px] border-gray-500 text-black lg:text-white bg-white lg:bg-transparent backdrop-blur-md bg-opacity-20">
-      <div className="max-w-screen-2xl h-full mx-auto px-4 flex items-center justify-between">
-        <h1 className="text-1xl uppercase font-bold">Home</h1>
-        <ul className="hidden lg:inline-flex items-center gap-8 uppercase text-sm font-semibold">
-          <li className="navbarLi">Integrations</li>
-          <li className="navbarLi">Pricing</li>
-          <li className="navbarLi">Docs</li>
-       
-          <li className="navbarLi">Changelog</li>
-          <li className="navbarLi">Login</li>
-        </ul>
-        <div className="hidden lg:inline-flex gap-8 items-center">
-          <BsSearch className="text-xl hover:text-hoverColor" />
-        
-          <button className="w-44 h-10 bg-white text-black uppercase text-sm font-semibold rounded-md hover:bg-darkRed hover:text-white duration-300">
-            Get in Touch
-          </button>
+    <div>
+      <nav aria-label="Global" className="hidden sm:block">
+        <div className="flex items-center gap-4 text-xs">
+          {NavLinks.map((link) => (
+            <Link
+              key={link.title}
+              onClick={() => setActiveNavLinks(link.title)}
+              className="relative rounded-full px-4 py-2 font-sf-pro-rounded-regular text-neutral-100 transition hover:text-neutral-100/75"
+              href="/"
+            >
+              {activeNavLinks === link.title && (
+                <motion.div
+                  layoutId="active-pil"
+                  className="absolute inset-0 bg-neutral-900/75"
+                  style={{ borderRadius: 9999 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 30 }}
+                ></motion.div>
+              )}
+              <span className="relative z-10">{link.title}</span>
+            </Link>
+          ))}
         </div>
-        <div className="inline-flex lg:hidden">
-          <FiMenu className="text-3xl" />
-        </div>
-      </div>
+      </nav>
     </div>
   );
 };
-
-export default Navbar;
