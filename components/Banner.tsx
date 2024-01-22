@@ -35,7 +35,7 @@ const Banner = () => {
             </h1>
             <p className="mt-6 font-sf-pro-rounded-regular text-sm leading-8 text-neutral-300 md:text-lg">
               Create consistent and responsive cross-platform Flutter app
-              interfaces in a snap with Modular UI's flexible building blocks.
+              interfaces in a snap with Modular UI&apos;s flexible building blocks.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <Link
