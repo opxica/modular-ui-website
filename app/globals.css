@@ -30,11 +30,6 @@
   font-style: normal;
 }
 
-:root {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-}
-
-body {
-  background-color: var(--background-dark);
+button:focus {
+  outline: none;
 }
