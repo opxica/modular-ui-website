@@ -35,7 +35,8 @@ const Banner = () => {
             </h1>
             <p className="mt-6 font-sf-pro-rounded-regular text-sm leading-8 text-neutral-300 md:text-lg">
               Create consistent and responsive cross-platform Flutter app
-              interfaces in a snap with Modular UI&apos;s flexible building blocks.
+              interfaces in a snap with Modular UI&apos;s flexible building
+              blocks.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <Link
@@ -55,7 +56,7 @@ const Banner = () => {
 
               <Link
                 className="group relative flex w-36 items-center justify-center overflow-hidden rounded-full border border-neutral-800/50 bg-transparent py-3 text-center font-sf-pro-rounded-regular text-sm text-neutral-100 transition hover:border-neutral-800/85 hover:text-neutral-100/85"
-                href="https://github.com/opxica/modular-ui-website"
+                href="https://github.com/opxica/modular-ui"
                 target="_blank"
                 rel="noopener noreferrer"
               >
