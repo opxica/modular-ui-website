@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+  darkMode: "class",
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -8,6 +9,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        "banner-pattern": "url('/public/banner-pattern.svg')",
+      },
       fontFamily: {
         "sf-pro-rounded-regular": ["SFProRoundedRegular", "sans-serif"],
         "sf-pro-rounded-medium": ["SFProRoundedMedium", "sans-serif"],
