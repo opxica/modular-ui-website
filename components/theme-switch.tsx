@@ -1,5 +1,3 @@
-// ThemeSwitch.js
-
 import { useEffect, useState } from "react";
 import { IconMoonStars, IconSun } from "@tabler/icons-react";
 import { Popover } from "@headlessui/react";

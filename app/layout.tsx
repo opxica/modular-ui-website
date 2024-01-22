@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
+import Headroom from "react-headroom";
 
 export const metadata: Metadata = {
   icons: {
@@ -18,21 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-                document.documentElement.classList.add('dark')
-              } else {
-                document.documentElement.classList.remove('dark')
-              }
-        `,
-          }}
-        />
-      </head>
-      <body className="bg-white dark:bg-black">
-        <Header />
+      <body>
         <main>{children}</main>
       </body>
     </html>

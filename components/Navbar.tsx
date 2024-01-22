@@ -9,24 +9,32 @@ const NavLinks = [
 ];
 
 export const Navbar = () => {
-  const [activeNavLinks, setActiveNavLinks] = useState(NavLinks[0].title);
+  const [activeNavLinks, setActiveNavLinks] = useState<String | null>(
+    NavLinks[0].title,
+  );
   return (
     <div>
       <nav aria-label="Global" className="hidden sm:block">
-        <div className="flex items-center gap-4 text-xs">
+        <div className="flex items-center gap-2 text-xs">
           {NavLinks.map((link) => (
             <Link
               key={link.title}
-              onClick={() => setActiveNavLinks(link.title)}
-              className="relative rounded-full px-4 py-2 font-sf-pro-rounded-regular text-neutral-900 transition hover:text-neutral-900/75 dark:text-neutral-100 dark:hover:text-neutral-100/75"
+              className="relative rounded-full px-4 py-2 font-sf-pro-rounded-regular text-neutral-100 transition hover:text-neutral-100/85"
               href="/"
+              onMouseEnter={() => setActiveNavLinks(link.title)}
             >
               {activeNavLinks === link.title && (
                 <motion.div
                   layoutId="active-pil"
-                  className="absolute inset-0 bg-gray-100 dark:bg-neutral-900/75"
+                  className="absolute inset-0 bg-neutral-800/50"
                   style={{ borderRadius: 9999 }}
-                  transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 400,
+                    damping: 30,
+                    enter: { opacity: 1 },
+                    exit: { opacity: 0 },
+                  }}
                 ></motion.div>
               )}
               <span className="relative z-10">{link.title}</span>

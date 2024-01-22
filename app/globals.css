@@ -30,6 +30,10 @@
   font-style: normal;
 }
 
-button:focus {
-  outline: none;
+:root {
+  background-color: rgb(15 15 15);
+}
+
+body {
+  background-color: var(--background-dark);
 }

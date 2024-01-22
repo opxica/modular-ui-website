@@ -9,6 +9,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        "banner-pattern": "url('/public/banner-pattern.svg')",
+      },
       fontFamily: {
         "sf-pro-rounded-regular": ["SFProRoundedRegular", "sans-serif"],
         "sf-pro-rounded-medium": ["SFProRoundedMedium", "sans-serif"],
