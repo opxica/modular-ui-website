@@ -19,7 +19,7 @@ const Header = () => {
   return (
     <Headroom className="absolute mx-auto w-full">
       <header className="z-50 mt-6 w-full px-4">
-        <div className="mx-auto flex h-14 max-w-screen-md items-center gap-4 rounded-full bg-neutral-900/75 p-2 shadow-inner shadow-neutral-900 backdrop-blur">
+        <div className="mx-auto flex h-14 max-w-screen-lg items-center gap-4 rounded-full bg-neutral-900/75 p-2 shadow-inner shadow-neutral-900 backdrop-blur">
           <Link className="block" href="/">
             <Image
               src="/logo.webp"
@@ -42,7 +42,7 @@ const Header = () => {
                 ></span>
                 <SearchBar />
                 <motion.a
-                  className="hidden rounded-full border border-neutral-800 bg-neutral-800/50 px-5 py-2.5 font-sf-pro-rounded-regular text-xs text-neutral-100  transition hover:border-neutral-500/10   hover:text-neutral-100/85 sm:block"
+                  className="hidden rounded-full border border-neutral-800 bg-neutral-800/50 px-5 py-2.5 font-sf-pro-rounded-regular text-xs text-neutral-100 transition hover:border-neutral-500/10 hover:text-neutral-100/85 sm:block"
                   href="/"
                   whileTap={{ scale: 0.9 }}
                 >

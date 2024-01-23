@@ -12,7 +12,7 @@ const NavbarMobile = () => {
     <div className="mt-2 flow-root rounded-3xl bg-neutral-900/75 p-2 shadow-inner shadow-neutral-900 backdrop-blur sm:hidden">
       <ul className="-my-2 divide-y divide-neutral-700/50">
         <li className="py-2">
-          <ul className="space-y-2">
+          <ul className="space-y-4">
             {NavLinks.map((link) => (
               <li key={link.title}>
                 <Link

@@ -12,7 +12,7 @@ import { motion } from "framer-motion";
 const Banner = () => {
   return (
     <section className="relative">
-      <div className="absolute inset-0 bg-white/75 bg-[url('/banner-pattern.svg')] bg-cover bg-center bg-no-repeat"></div>
+      <div className="absolute inset-0 bg-[url('/banner-pattern.svg')] bg-cover bg-center bg-no-repeat"></div>
 
       <div className="relative mx-auto max-w-screen-xl px-4 sm:px-6 lg:flex lg:items-center lg:px-8">
         <div className="mx-auto max-w-2xl py-36 sm:py-40">
@@ -57,7 +57,7 @@ const Banner = () => {
                 <span className="font-sf-pro-rounded-regular">pub.dev</span>
               </motion.a>
               <motion.a
-                className="group relative flex w-36 items-center justify-center overflow-hidden rounded-full border border-neutral-800/50 bg-transparent py-3 text-center font-sf-pro-rounded-regular text-sm text-neutral-100 transition hover:border-neutral-800/85 hover:text-neutral-100/85"
+                className="group relative flex w-36 items-center justify-center overflow-hidden rounded-full border border-neutral-800/50 bg-transparent py-3 text-center font-sf-pro-rounded-regular text-sm text-neutral-100 transition-all hover:border-neutral-800/85 hover:text-neutral-100/85"
                 href="https://github.com/opxica/modular-ui"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -67,7 +67,7 @@ const Banner = () => {
                   <IconStarFilled size={14} className="text-yellow-300" />
                 </span>
                 <div className="flex items-center space-x-1">
-                  <IconBrandGithub size={14} />
+                  <IconBrandGithub size={18} />
                   <span className="transition-all sm:group-hover:me-4">
                     Github Star
                   </span>
