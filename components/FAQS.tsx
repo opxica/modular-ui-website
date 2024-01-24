@@ -16,7 +16,7 @@ const FAQS = () => {
             background="transparent"
             minSize={0.6}
             maxSize={1.4}
-            particleDensity={150}
+            particleDensity={100}
             className="h-full w-full"
             particleColor="#FFFFFF"
           />
