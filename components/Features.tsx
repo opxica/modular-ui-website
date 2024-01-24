@@ -5,7 +5,6 @@ import {
   IconFolderCode,
   IconWindowMaximize,
 } from "@tabler/icons-react";
-import React from "react";
 import SparklesCore from "./ui/sparkles";
 import Spotlight from "./ui/Spotlight";
 
@@ -19,11 +18,11 @@ const Features = () => {
         <span>Features</span>
         <div className="absolute h-fit w-full">
           <SparklesCore
-            id="tsparticlesfullpage"
+            id="tsparticlesfeatures"
             background="transparent"
             minSize={0.6}
             maxSize={1.4}
-            particleDensity={100}
+            particleDensity={150}
             className="h-full w-full"
             particleColor="#FFFFFF"
           />
