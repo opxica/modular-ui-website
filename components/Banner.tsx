@@ -1,13 +1,10 @@
-"use client";
 import {
   IconArrowBarRight,
   IconGitMerge,
-  IconBrandGithub,
   IconStarFilled,
 } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
 
 const Banner = () => {
   return (
@@ -32,7 +29,7 @@ const Banner = () => {
           </Link>
 
           <div className="text-center">
-            <h1 className="font-sf-pro-rounded-medium text-4xl font-bold tracking-tight text-neutral-100 sm:text-5xl md:text-6xl">
+            <h1 className="font-sf-pro-rounded-medium text-4xl tracking-tight text-neutral-100 sm:text-5xl md:text-6xl">
               Instant Flutter Elegance. Consistent by design
             </h1>
             <p className="md:text-md mt-6 font-sf-pro-rounded-medium text-sm leading-8 text-neutral-300 sm:px-16">
@@ -40,13 +37,12 @@ const Banner = () => {
               interfaces in a snap with Modular UI&apos;s flexible building
               blocks.
             </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
-              <motion.a
-                className="text-md flex w-36 items-center justify-center space-x-2 rounded-full border border-neutral-800 bg-gray-100 bg-neutral-800/50 py-2.5 font-sf-pro-rounded-regular text-neutral-100 shadow-xl transition-all hover:border-neutral-500/10 hover:text-neutral-100/75 hover:shadow-neutral-700/10"
+            <div className="mt-10 flex items-center justify-center gap-x-8">
+              <Link
+                className="text-md flex w-36 items-center justify-center gap-2 rounded-full border border-neutral-800 bg-gray-100 bg-neutral-800/50 py-3 font-sf-pro-rounded-regular text-neutral-100 transition-all hover:border-neutral-500/10 hover:text-neutral-100/75 hover:shadow-xl hover:shadow-neutral-700/10"
                 href="https://pub.dev/packages/modular_ui"
                 target="_blank"
                 rel="noopener noreferrer"
-                whileTap={{ scale: 0.9 }}
               >
                 <Image
                   src="/dart-logo.png"
@@ -55,28 +51,16 @@ const Banner = () => {
                   alt="dart logo"
                 />
                 <span className="font-sf-pro-rounded-regular">pub.dev</span>
-              </motion.a>
-              <motion.a
-                className="group relative flex w-36 items-center justify-center overflow-hidden rounded-full border border-neutral-800/50 bg-transparent py-3 text-center font-sf-pro-rounded-regular text-sm text-neutral-100 transition-all hover:border-neutral-800/85 hover:text-neutral-100/85"
+              </Link>
+              <Link
+                className="text-md flex items-center justify-center gap-2 rounded-full font-sf-pro-rounded-regular text-neutral-100 transition hover:text-neutral-100/75"
                 href="https://github.com/opxica/modular-ui"
                 target="_blank"
                 rel="noopener noreferrer"
-                whileTap={{ scale: 0.9 }}
               >
-                <span className="hidden sm:absolute sm:-end-full sm:block sm:transition-all sm:group-hover:end-4">
-                  <IconStarFilled size={14} className="text-yellow-300" />
-                </span>
-                <div className="flex items-center space-x-1">
-                  <IconBrandGithub size={18} />
-                  <span className="transition-all sm:group-hover:me-4">
-                    Github Star
-                  </span>
-                </div>
-                <IconStarFilled
-                  size={14}
-                  className="ml-3 text-yellow-300 sm:hidden"
-                />
-              </motion.a>
+                <IconStarFilled size={16} className="text-[#E3B341]" />
+                <span className="">Github star</span>
+              </Link>
             </div>
           </div>
         </div>
