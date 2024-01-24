@@ -111,6 +111,15 @@ const CommandSearch = ({ open, setOpen }: CommandSearchProps) => {
         id: "components",
         items: [
           {
+            id: "back",
+            children: "Back",
+            icon: IconArrowLeft,
+            closeOnSelect: false,
+            onClick: () => {
+              setPage("root");
+            },
+          },
+          {
             id: "button",
             children: "Button",
             icon: IconCube,
@@ -307,17 +316,7 @@ const CommandSearch = ({ open, setOpen }: CommandSearchProps) => {
           <CommandPalette.FreeSearchAction />
         )}
       </CommandPalette.Page>
-
       <CommandPalette.Page id="components">
-        <CommandPalette.ListItem
-          index={0}
-          icon={IconArrowLeft}
-          closeOnSelect={false}
-          onClick={() => {
-            setPage("root");
-          }}
-          children="Back"
-        />
         <CommandPalette.List heading="Components">
           {componentsItems
             .find((list) => list.id === "components")

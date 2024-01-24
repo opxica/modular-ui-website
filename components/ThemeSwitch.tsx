@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { IconMoonStars, IconSun } from "@tabler/icons-react";
 import { Popover } from "@headlessui/react";
 import { motion } from "framer-motion";
@@ -13,6 +13,17 @@ const ThemeList = [
 const ThemeSwitch = () => {
   const [theme, setTheme] = useState<Theme>(null);
 
+  const applyTheme = (selectedTheme: Theme) => {
+    document.documentElement.classList.toggle("dark", selectedTheme === "dark");
+  };
+
+  const applySystemTheme = useCallback(() => {
+    const prefersDarkMode = window.matchMedia(
+      "(prefers-color-scheme: dark)",
+    ).matches;
+    applyTheme(prefersDarkMode ? "dark" : "light");
+  }, [applyTheme]);
+
   useEffect(() => {
     const storedTheme = localStorage.getItem("theme");
     if (storedTheme === "dark" || storedTheme === "light") {
@@ -22,11 +33,7 @@ const ThemeSwitch = () => {
       setTheme("system");
       applySystemTheme();
     }
-  }, []);
-
-  const applyTheme = (selectedTheme: Theme) => {
-    document.documentElement.classList.toggle("dark", selectedTheme === "dark");
-  };
+  }, [applySystemTheme]);
 
   const toggleDarkMode = (selectedTheme: Theme) => {
     if (selectedTheme === "system") {
@@ -47,13 +54,6 @@ const ThemeSwitch = () => {
         applySystemTheme();
       }
     }
-  };
-
-  const applySystemTheme = () => {
-    const prefersDarkMode = window.matchMedia(
-      "(prefers-color-scheme: dark)",
-    ).matches;
-    applyTheme(prefersDarkMode ? "dark" : "light");
   };
 
   return (
