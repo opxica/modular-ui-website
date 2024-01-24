@@ -10,9 +10,8 @@ const Banner = () => {
   return (
     <section className="relative">
       <div className="absolute inset-0 bg-[url('/banner-pattern.svg')] bg-cover bg-center bg-no-repeat"></div>
-
       <div className="relative mx-auto max-w-screen-xl px-4 sm:px-6 lg:flex lg:items-center lg:px-8">
-        <div className="mx-auto max-w-2xl py-36 sm:py-40">
+        <div className="mx-auto max-w-2xl py-40 sm:py-44">
           <Link href="/" className="mb-8 flex justify-center">
             <div className="relative flex items-center rounded-full border border-neutral-800/50 bg-neutral-800/50 p-0.5 font-sf-pro-rounded-regular text-sm leading-6 text-neutral-100 shadow-inner backdrop-blur transition-all hover:border-neutral-700">
               <div className="mr-2 flex w-fit items-center gap-1 rounded-full bg-black px-3 py-1 font-sf-pro-rounded-regular">
