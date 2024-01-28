@@ -1,13 +1,13 @@
 import { useCallback, useEffect, useState } from "react";
-import { IconMoonStars, IconSun } from "@tabler/icons-react";
 import { Popover } from "@headlessui/react";
 import { motion } from "framer-motion";
+import { FaMoon , FaSun } from "react-icons/fa6";
 
 type Theme = "dark" | "light" | "system" | null;
 
 const ThemeList = [
-  { title: "Light", icon: <IconSun size={18} />, value: "light" },
-  { title: "Dark", icon: <IconMoonStars size={18} />, value: "dark" },
+  { title: "Light", icon: <FaSun size={18} />, value: "light" },
+  { title: "Dark", icon: <FaMoon size={18} />, value: "dark" },
 ];
 
 const ThemeSwitch = () => {
@@ -62,7 +62,7 @@ const ThemeSwitch = () => {
         type="button"
         className="hidden text-neutral-900 transition hover:text-neutral-900/75 dark:text-neutral-100 dark:hover:text-neutral-100/75 sm:block"
       >
-        {theme === "dark" ? <IconMoonStars size={18} /> : <IconSun size={18} />}
+        {theme === "dark" ? <FaMoon size={18} /> : <FaSun size={18} />}
       </Popover.Button>
 
       <Popover.Panel className="absolute z-10 mt-5 w-28 rounded-md border border-gray-200 bg-gray-50 p-1 font-sf-pro-rounded-regular text-neutral-900 dark:border-neutral-800 dark:bg-neutral-900 dark:text-neutral-100">

@@ -1,8 +1,10 @@
 // consist contribution guidelines for new contributors.
 
+import ComingSoon from "@/components/ComingSoon"
+
 const Contribute = () => {
   return (
-    <div>Contribute</div>
+    <ComingSoon />
   )
 }
 

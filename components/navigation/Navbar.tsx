@@ -1,26 +1,15 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import {
-  IconMenu,
-  IconSearch,
-  IconBrandGithub,
-  IconBrandDiscord,
-} from "@tabler/icons-react";
+import { FaXTwitter, FaGithub,FaDiscord, FaBars, FaMagnifyingGlass  } from "react-icons/fa6";
 import Headroom from "react-headroom";
 import NavbarMobile from "./NavbarMobile";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import ButtonIcon from "../ui/ButtonIcon";
 import SocialLink from "../ui/SocialLink";
-import { IconBrandX } from "@tabler/icons-react";
 import CommandSearch from "../CommandSearch";
-
-const NavLinks = [
-  { title: "Docs", path: "/" },
-  { title: "Components", path: "/" },
-  { title: "FAQs", path: "/" },
-];
+import NavLinks from "@/data/navigation/navLinks";
 
 export const Navbar = () => {
   const [activeNavLinks, setActiveNavLinks] = useState<String | null>(
@@ -84,17 +73,17 @@ export const Navbar = () => {
               <div className="hidden space-x-4 sm:flex">
                 <SocialLink
                   href="https://twitter.com/modularui"
-                  icon={<IconBrandX size={18} />}
+                  icon={<FaXTwitter size={18} />}
                   label="Twitter"
                 />
                 <SocialLink
                   href="https://github.com/opxica"
-                  icon={<IconBrandGithub size={18} />}
+                  icon={<FaGithub  size={18} />}
                   label="GitHub"
                 />
                 <SocialLink
                   href="https://discord.gg/jEPKuWYt"
-                  icon={<IconBrandDiscord size={18} />}
+                  icon={<FaDiscord  size={18} />}
                   label="Discord"
                 />
               </div>
@@ -105,20 +94,20 @@ export const Navbar = () => {
                 ></span>
                 <ButtonIcon
                   onClick={handleCommandSearch}
-                  icon={<IconSearch />}
+                  icon={<FaMagnifyingGlass />}
                   label="search-button"
                   className="p-3"
                 />
                 <Link
                   className="hidden rounded-full border border-neutral-800 bg-neutral-800/50 px-5 py-3 font-sf-pro-rounded-regular text-xs text-neutral-100 transition hover:border-neutral-500/10 hover:text-neutral-100/85 sm:block"
-                  href="/"
+                  href="/getting-started"
                 >
                   Get started
                 </Link>
               </div>
               <ButtonIcon
                 onClick={toggleMobileNav}
-                icon={<IconMenu />}
+                icon={<FaBars  />}
                 label="menu-button"
                 className="p-3 sm:hidden"
               />

@@ -1,19 +1,12 @@
-import {
-  IconAdjustments,
-  IconBolt,
-  IconComponents,
-  IconFolderCode,
-  IconWindowMaximize,
-} from "@tabler/icons-react";
 import SparklesCore from "./ui/sparkles";
 import Spotlight from "./ui/Spotlight";
-
+import { FaBolt, FaCubes, FaListUl, FaMaximize, FaSliders } from "react-icons/fa6";
 const Features = () => {
   return (
     <div className="mx-auto max-w-screen-lg space-y-12 px-4 pb-40 sm:px-6 sm:pb-44 lg:items-center lg:px-8">
       <div className="text-md relative mx-auto flex w-fit items-center justify-center space-x-2 rounded-full bg-neutral-800 p-1 pr-3 font-sf-pro-rounded-regular text-neutral-100">
         <span className="rounded-full bg-neutral-700 p-1">
-          <IconBolt size={20} />
+          <FaBolt size={18} />
         </span>
         <span>Features</span>
         <div className="absolute h-fit w-full">
@@ -34,7 +27,7 @@ const Features = () => {
           <div className="flex h-full w-full">
             <div className="text-start">
               <div>
-                <IconComponents size={25} className="mb-2 text-neutral-100" />
+                <FaCubes size={20} className="mb-2 text-neutral-100" />
               </div>
               <h3 className="font-sf-pro-rounded-medium text-xl text-neutral-100">
                 Rich Components
@@ -52,7 +45,7 @@ const Features = () => {
           <div className="flex h-full w-full">
             <div className="text-start">
               <div>
-                <IconAdjustments size={25} className="mb-2 text-neutral-100" />
+                <FaSliders size={20} className="mb-2 text-neutral-100" />
               </div>
               <h3 className="font-sf-pro-rounded-medium text-xl text-neutral-100">
                 Custom Theming
@@ -70,8 +63,8 @@ const Features = () => {
           <div className="flex h-full w-full">
             <div className="text-start">
               <div>
-                <IconWindowMaximize
-                  size={25}
+                <FaMaximize
+                  size={20}
                   className="mb-2 text-neutral-100"
                 />
               </div>
@@ -91,7 +84,7 @@ const Features = () => {
           <div className="flex h-full w-full">
             <div className="text-start">
               <div>
-                <IconFolderCode size={25} className="mb-2 text-neutral-100" />
+                <FaListUl size={20} className="mb-2 text-neutral-100" />
               </div>
               <h3 className="font-sf-pro-rounded-medium text-xl text-neutral-100">
                 Explore Clear Documentation

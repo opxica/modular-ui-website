@@ -1,6 +1,5 @@
 import SocialLink from "./ui/SocialLink";
-import { IconBrandGithub, IconBrandX } from "@tabler/icons-react";
-import { IconBrandDiscord } from "@tabler/icons-react";
+import { FaXTwitter, FaGithub,FaDiscord  } from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -15,17 +14,17 @@ const Footer = () => {
           <div className="flex items-center space-x-4">
             <SocialLink
               href="https://twitter.com/modularui"
-              icon={<IconBrandX size={18} />}
+              icon={<FaXTwitter size={18} />}
               label="Twitter"
             />
             <SocialLink
               href="https://github.com/opxica"
-              icon={<IconBrandGithub size={18} />}
+              icon={<FaGithub size={18} />}
               label="GitHub"
             />
             <SocialLink
               href="https://discord.gg/jEPKuWYt"
-              icon={<IconBrandDiscord size={18} />}
+              icon={<FaDiscord size={18} />}
               label="Discord"
             />
           </div>

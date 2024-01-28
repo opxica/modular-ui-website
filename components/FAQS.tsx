@@ -1,13 +1,11 @@
-import { IconCirclePlus } from "@tabler/icons-react";
 import SparklesCore from "./ui/sparkles";
-import { IconQuestionMark } from "@tabler/icons-react";
-
+import { FaCirclePlus, FaQuestion } from "react-icons/fa6";
 const FAQS = () => {
   return (
-    <div className="mx-auto max-w-screen-lg space-y-12 px-4 pb-40 sm:px-6 sm:pb-44 lg:items-center lg:px-8">
+    <div id="faqs" className="mx-auto max-w-screen-lg space-y-12 px-4 pb-40 sm:px-6 sm:pb-44 lg:items-center lg:px-8">
       <div className="text-md relative mx-auto flex w-fit items-center justify-center space-x-2 rounded-full bg-neutral-800 p-1 pr-3 font-sf-pro-rounded-regular text-neutral-100">
         <span className="rounded-full bg-neutral-700 p-1">
-          <IconQuestionMark size={20} />
+          <FaQuestion size={18} />
         </span>
         <span>FAQs</span>
         <div className="absolute h-fit w-full">
@@ -25,14 +23,13 @@ const FAQS = () => {
       <div className="divide-y divide-neutral-800/50 rounded-2xl border border-neutral-800 bg-neutral-800/50">
         <details
           className="group p-6 [&_summary::-webkit-details-marker]:hidden"
-          open
         >
           <summary className="group flex cursor-pointer items-center justify-between gap-1.5 text-neutral-100 hover:text-neutral-100/85">
             <h2 className="text-md font-sf-pro-rounded-medium sm:text-lg">
               How to use Modular UI?
             </h2>
-            <div className="block text-nowrap">
-              <IconCirclePlus size={25} />
+            <div className="block text-nowrap group">
+              <FaCirclePlus size={20} />
             </div>
           </summary>
 
@@ -47,8 +44,8 @@ const FAQS = () => {
             <h2 className="text-md font-sf-pro-rounded-medium sm:text-lg">
               What are the main features of Modular UI?
             </h2>
-            <div className="block text-nowrap">
-              <IconCirclePlus size={25} />
+            <div className="block text-nowrap group">
+              <FaCirclePlus size={20} />
             </div>
           </summary>
 
@@ -63,8 +60,8 @@ const FAQS = () => {
             <h2 className="text-md font-sf-pro-rounded-medium sm:text-lg">
               How do I manage dependencies for Modular UI in my Flutter project?
             </h2>
-            <div className="block text-nowrap">
-              <IconCirclePlus size={25} />
+            <div className="block text-nowrap group">
+              <FaCirclePlus size={20} />
             </div>
           </summary>
 
@@ -80,8 +77,8 @@ const FAQS = () => {
             <h2 className="text-md font-sf-pro-rounded-medium sm:text-lg">
               How to contribute to Modular UI?
             </h2>
-            <div className="block text-nowrap">
-              <IconCirclePlus size={25} />
+            <div className="block text-nowrap group">
+              <FaCirclePlus size={20} />
             </div>
           </summary>
 
