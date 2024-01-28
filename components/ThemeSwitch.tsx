@@ -13,14 +13,12 @@ const ThemeList = [
 const ThemeSwitch = () => {
   const [theme, setTheme] = useState<Theme>(null);
 
-  const applyTheme = (selectedTheme: Theme) => {
+  const applyTheme = useCallback((selectedTheme: Theme) => {
     document.documentElement.classList.toggle("dark", selectedTheme === "dark");
-  };
+  }, []);
 
   const applySystemTheme = useCallback(() => {
-    const prefersDarkMode = window.matchMedia(
-      "(prefers-color-scheme: dark)",
-    ).matches;
+    const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
     applyTheme(prefersDarkMode ? "dark" : "light");
   }, [applyTheme]);
 
@@ -33,28 +31,29 @@ const ThemeSwitch = () => {
       setTheme("system");
       applySystemTheme();
     }
-  }, [applySystemTheme]);
+  }, [applySystemTheme, applyTheme]);
 
-  const toggleDarkMode = (selectedTheme: Theme) => {
-    if (selectedTheme === "system") {
-      const prefersDarkMode = window.matchMedia(
-        "(prefers-color-scheme: dark)",
-      ).matches;
-      const newTheme = prefersDarkMode ? "dark" : "light";
-      setTheme(newTheme);
-      localStorage.setItem("theme", newTheme);
-      applyTheme(newTheme);
-    } else {
-      setTheme(selectedTheme);
-      if (selectedTheme === "dark" || selectedTheme === "light") {
-        localStorage.setItem("theme", selectedTheme);
-        applyTheme(selectedTheme);
+  const toggleDarkMode = useCallback(
+    (selectedTheme: Theme) => {
+      if (selectedTheme === "system") {
+        const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const newTheme = prefersDarkMode ? "dark" : "light";
+        setTheme(newTheme);
+        localStorage.setItem("theme", newTheme);
+        applyTheme(newTheme);
       } else {
-        localStorage.removeItem("theme");
-        applySystemTheme();
+        setTheme(selectedTheme);
+        if (selectedTheme === "dark" || selectedTheme === "light") {
+          localStorage.setItem("theme", selectedTheme);
+          applyTheme(selectedTheme);
+        } else {
+          localStorage.removeItem("theme");
+          applySystemTheme();
+        }
       }
-    }
-  };
+    },
+    [applyTheme, applySystemTheme]
+  );
 
   return (
     <Popover className="relative">

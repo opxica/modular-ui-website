@@ -8,7 +8,7 @@ const ComingSoon = () => {
         Coming Soon
       </h1>
       <p className="mb-8 text-lg text-center text-neutral-100">
-        We're working hard to bring you something amazing. Stay tuned!
+        We&apos;re working hard to bring you something amazing. Stay tuned!
       </p>
       <Link
         className="text-md transition flex items-center animate-pulse justify-center gap-2 rounded-full font-sf-pro-rounded-regular text-neutral-100 "
