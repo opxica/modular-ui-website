@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Header from "@/components/Header";
-import Headroom from "react-headroom";
 
 export const metadata: Metadata = {
   icons: {

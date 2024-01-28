@@ -1,16 +1,11 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
-
-const NavLinks = [
-  { title: "Docs", path: "/" },
-  { title: "Components", path: "/" },
-  { title: "FAQs", path: "/" },
-];
+import NavLinks from "@/data/navigation/navLinks";
 
 const NavbarMobile = () => {
   return (
     <div className="mt-2 flow-root rounded-3xl bg-neutral-900/75 p-2 shadow-inner shadow-neutral-900 backdrop-blur sm:hidden">
-      <ul className="-my-2 divide-y divide-neutral-700/50">
+      <ul className="-my-2 divide-y divide-neutral-800/50">
         <li className="py-2">
           <ul className="space-y-4">
             {NavLinks.map((link) => (
@@ -32,7 +27,7 @@ const NavbarMobile = () => {
           >
             <Link
               className="w-full rounded-full border border-neutral-800 bg-neutral-800/50 px-5 py-2.5 text-center font-sf-pro-rounded-regular  text-xs text-neutral-100 transition hover:border-neutral-500/10  hover:text-neutral-100/85 sm:block"
-              href="/"
+              href="/getting-started"
             >
               Get started
             </Link>
