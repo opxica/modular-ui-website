@@ -4,7 +4,7 @@ type NavLink = {
   };
   
   const NavLinks: NavLink[] = [
-    { title: "Docs", path: "/" },
+    { title: "Docs", path: "https://yashs-organization-7.gitbook.io/modular-ui-documentation/" },
     { title: "Components", path: "/" },
     { title: "FAQs", path: "/#faqs" },
   ];

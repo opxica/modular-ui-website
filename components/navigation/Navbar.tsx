@@ -47,7 +47,7 @@ export const Navbar = () => {
                   <Link
                     key={link.title}
                     className="relative rounded-full px-5 py-3 font-sf-pro-rounded-regular text-neutral-100 transition hover:text-neutral-100/85"
-                    href="/"
+                    href={link.path}
                     onMouseEnter={() => setActiveNavLinks(link.title)}
                   >
                     {activeNavLinks === link.title && (
