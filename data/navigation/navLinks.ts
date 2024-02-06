@@ -4,8 +4,8 @@ type NavLink = {
   };
   
   const NavLinks: NavLink[] = [
-    { title: "Docs", path: "/" },
-    { title: "Components", path: "/" },
+    { title: "Docs", path: "/docs" },
+    { title: "Components", path: "/docs/components" },
     { title: "FAQs", path: "/#faqs" },
   ];
   

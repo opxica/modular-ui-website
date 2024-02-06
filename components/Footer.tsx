@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="flex items-center justify-between">
           <div>
             <p className="text-xs text-neutral-100">
-              &copy; 2024. Modular UI. All rights reserved.
+              &copy; 2024. Opxica. All rights reserved.
             </p>
           </div>
           <div className="flex items-center space-x-4">
