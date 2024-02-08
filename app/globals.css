@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "SFProDisplayMedium";
+  src: url("/fonts/SF-Pro-Display-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SFProDisplayRegular";
+  src: url("/fonts/SF-Pro-Display-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SFProRoundedMedium";
+  src: url("/fonts/SF-Pro-Rounded-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SFProRoundedRegular";
+  src: url("/fonts/SF-Pro-Rounded-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --background-dark: rgb(15 15 15);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-dark: rgb(15 15 15);
+  }
+}
+body {
+  background: var(--background-dark);
+  font-family: "SFProRoundedRegular", sans-serif;
+}
