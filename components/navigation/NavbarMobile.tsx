@@ -12,7 +12,7 @@ const NavbarMobile = () => {
               <li key={link.title}>
                 <Link
                   className="relative rounded-full px-5 py-2.5 font-sf-pro-rounded-regular text-neutral-100 transition hover:text-neutral-100/85"
-                  href="/"
+                  href={link.path}
                 >
                   <span className="relative z-10">{link.title}</span>
                 </Link>
@@ -27,7 +27,8 @@ const NavbarMobile = () => {
           >
             <Link
               className="w-full rounded-full border border-neutral-800 bg-neutral-800/50 px-5 py-2.5 text-center font-sf-pro-rounded-regular  text-xs text-neutral-100 transition hover:border-neutral-500/10  hover:text-neutral-100/85 sm:block"
-              href="/getting-started"
+              href="https://yashs-organization-7.gitbook.io/modular-ui-documentation/"
+              target="_blank"
             >
               Get started
             </Link>
