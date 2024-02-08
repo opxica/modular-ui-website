@@ -11,7 +11,9 @@ export const getMenuItems = (setPage: React.Dispatch<React.SetStateAction<"root"
           id: "docs",
           children: "Docs",
           icon: FaFolder,
-          href: "/docs",
+          href: "https://yashs-organization-7.gitbook.io/modular-ui-documentation/",
+          target: "_blank",
+          closeOnSelect: false,
         },
         {
           id: "components ",
